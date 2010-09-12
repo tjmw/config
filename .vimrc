@@ -120,7 +120,7 @@ function ToggleComment()
         s/$/\=comment_end/
     endif
 endfunction
-map <silent> X :call ToggleComment()<cr>
+map <silent> X :call ToggleComment()<cr>j
 
 " remove leading whitespace
 function RemoveLeadingWhiteSpace()
@@ -128,14 +128,14 @@ function RemoveLeadingWhiteSpace()
         s/^\s\+//
     endif
 endfunction
-map <silent> W :call RemoveLeadingWhiteSpace()<cr>
+map <silent> W :call RemoveLeadingWhiteSpace()<cr>j
 
 " easy tab indenting
 function Indent()
     let indent_char = "\t"
     s/^/\=indent_char/
 endfunction
-map <silent> <tab> :call Indent()<cr>
+map <silent> <tab> :call Indent()<cr>j
 
 " just like above, but remove tabs at start of line
 function UnIndent()
@@ -144,7 +144,7 @@ function UnIndent()
         execute 's/^' . indent_char . '//'
     endif
 endfunction
-map <silent> <s-tab> :call UnIndent()<cr>
+map <silent> <s-tab> :call UnIndent()<cr>j
 
 " Highlight lines > 100 characters
 function HighlightLongLines()
