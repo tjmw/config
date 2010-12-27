@@ -84,6 +84,9 @@ endif
 " from http://vim.wikia.com/wiki/Open_file_under_cursor
 map ,f :vertical wincmd f<CR>
 
+" use ,d to diff against repository using VCSVimDiff
+map ,d :VCSVimDiff<CR>
+
 " run unit tests with prove using ,t (from perl hacks)
 " let current_file=expand("%:t")
 autocmd FileType perl map ,t <Esc>:!prove t/% -v<CR>
