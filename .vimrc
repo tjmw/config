@@ -48,7 +48,7 @@ set t_vb=        " turn off terminal's visual bell
 
 set completeopt+=longest  " insert any common text for insert completion
 set wildmode=longest,list " in ex mode, complete longest common string, then list alternatives (like bash)
-set diffopt+=iwhite       " ignore whitespace in diffmode
+set diffopt+=iwhite,vertical " ignore whitespace in diffmode
 
 " set up statusline
 set statusline=%f\ %y%r%m%=col\ %c\ line\ %1*%l%*/%L " show file, read-only, modified, file type, and line number
