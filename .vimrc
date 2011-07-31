@@ -87,6 +87,12 @@ map ,f :vertical wincmd f<CR>
 " use ,d to diff against repository using VCSVimDiff
 map ,d :VCSVimDiff<CR>
 
+" map ctrl-hjkl for easy window movement
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
 " run unit tests with prove using ,t (from perl hacks)
 " let current_file=expand("%:t")
 autocmd FileType perl map ,t <Esc>:!prove t/% -v<CR>
