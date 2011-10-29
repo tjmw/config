@@ -58,8 +58,8 @@ set laststatus=2                                     " always show the status li
 hi DiffText cterm=bold ctermbg=9 ctermfg=16
 
 " highlight long lines
-highlight LongLines ctermbg=cyan guibg=cyan
-autocmd BufNewFile,BufRead * call HighlightLongLines()
+" highlight LongLines ctermbg=cyan guibg=cyan
+" autocmd BufNewFile,BufRead * call HighlightLongLines()
 
 " fix indenting issues from other applications (toggle using F2)
 " from http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
