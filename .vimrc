@@ -14,8 +14,8 @@ set t_Co=256              " use 256 colors
 
 " editing
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set shiftround
 set copyindent                 " copy indenting style of the line above
 set whichwrap=b,s,h,l,<,>,[,]  " allow the cursor to wrap on anything
