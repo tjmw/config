@@ -8,6 +8,8 @@ source /Users/tom/dev/scripts/.git-completion.sh
 source /Users/tom/dev/scripts/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-PS1='\u@\h \W$(__git_ps1 " (%s)")\$ '
+PS1='\u@\h \w$(__git_ps1 " (%s)")\$ '
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
