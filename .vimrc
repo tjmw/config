@@ -76,6 +76,15 @@ if &term == "screen" || &term == "xterm" || &term == "screen-bce"
     set title
 endif
 
+function! ResetTitle()
+    " disable vim's ability to set the title
+    exec "set title t_ts='' t_fs=''"
+    " and restore it to 'bash'
+    exec ":!echo -e '\033kbash\033\\'\<CR>"
+endfunction
+
+au VimLeave * silent call ResetTitle()
+
 " =============================================================================
 " Custom key mappings
 " =============================================================================
