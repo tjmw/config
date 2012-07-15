@@ -24,7 +24,6 @@ let loaded_matchparen = 1      " don't show matching parens in vim 7+
 
 " filetypes
 autocmd BufNewFile,BufRead *.t              set filetype=perl
-autocmd BufNewFile,BufRead *.md,*.mh,*.html set filetype=mason
 autocmd BufNewFile,BufRead *.yaml,*.yml     set filetype=yaml
 
 " in text files, always limit the width of text to 78 characters
