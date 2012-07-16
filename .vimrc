@@ -22,6 +22,10 @@ set whichwrap=b,s,h,l,<,>,[,]  " allow the cursor to wrap on anything
 set backspace=2                " fully enable backspace to delete anything in insert mode
 let loaded_matchparen = 1      " don't show matching parens in vim 7+
 
+" open NerdTree by default (and move to main window)
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
 " filetypes
 autocmd BufNewFile,BufRead *.t              set filetype=perl
 autocmd BufNewFile,BufRead *.yaml,*.yml     set filetype=yaml
