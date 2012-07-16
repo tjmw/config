@@ -33,9 +33,6 @@ autocmd BufNewFile,BufRead *.yaml,*.yml     set filetype=yaml
 " in text files, always limit the width of text to 78 characters
 autocmd BufNewFile,BufRead *.txt            set tw=78
 
-" for Mason files, tabs are 2 spaces wide
-autocmd FileType mason set tabstop=2 shiftwidth=2
-
 " set filename in the screen status line when using screen
 " see http://www.vim.org/tips/tip.php?tip_id=1126
 autocmd BufEnter * let &titlestring = expand("%:t")
