@@ -61,6 +61,9 @@ hi DiffText cterm=bold ctermbg=9 ctermfg=16
 " highlight LongLines ctermbg=cyan guibg=cyan
 " autocmd BufNewFile,BufRead * call HighlightLongLines()
 
+" highlight trailing whitespace
+match ErrorMsg '\s\+$'
+
 " fix indenting issues from other applications (toggle using F2)
 " from http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 nnoremap <F2> :set invpaste paste?<CR>
