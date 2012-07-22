@@ -8,10 +8,17 @@ source /Users/tom/dev/scripts/.git-completion.sh
 source /Users/tom/dev/scripts/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-PS1='\033k\033\\\u@\h \w$(__git_ps1 " (%s)")\$ '
+#export PS1='\[\033[0;35m\]\u@\h \w$(__git_ps1 " (%s)") \[\033[0;33m\]❯ \[\033k\033\\\]\[\033[0m\]'
+export PS1='\[\033[0;35m\]\u@\h \w$(__git_ps1 " (%s)") \[\033[0;33m\]$ \[\033k\033\\\]\[\033[0m\]'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/mysql/bin # MySQL binaries
 
 export EDITOR=vim
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Print gem location
+function gemloc {
+  ruby -e "puts Gem::Specification.find_by_name('$1').gem_dir"
+}
