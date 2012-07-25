@@ -1,0 +1,7 @@
+--color
+
+--ignore-case
+
+--type-add=scss=.scss
+--type-add=sass=.sass
+--type-add=coffeescript=.coffee
