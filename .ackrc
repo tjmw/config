@@ -5,3 +5,4 @@
 --type-add=scss=.scss
 --type-add=sass=.sass
 --type-add=coffeescript=.coffee
+--type-add=haml=.haml
