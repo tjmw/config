@@ -11,7 +11,7 @@ set ruler
 syntax on                 " turn on syntax highlighting
 filetype indent plugin on " set indentation rules based on file type and enable filetype plugins
 set t_Co=256              " use 256 colors
-
+set bg=dark
 " editing
 set expandtab
 set tabstop=2
@@ -20,6 +20,7 @@ set shiftround
 set copyindent                 " copy indenting style of the line above
 set whichwrap=b,s,h,l,<,>,[,]  " allow the cursor to wrap on anything
 set backspace=2                " fully enable backspace to delete anything in insert mode
+set clipboard=unnamed
 let loaded_matchparen = 1      " don't show matching parens in vim 7+
 
 let g:Powerline_symbols = 'fancy'
@@ -61,6 +62,8 @@ hi DiffText cterm=bold ctermbg=9 ctermfg=16
 
 " highlight trailing whitespace
 match ErrorMsg '\s\+$'
+
+imap § <Esc>
 
 " fix indenting issues from other applications (toggle using F2)
 " from http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
@@ -104,6 +107,8 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 
 map ,t :CommandT<CR>
+
+call pathogen#infect()
 
 " =============================================================================
 " Functions (and corresponding mappings)
