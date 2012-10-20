@@ -2,7 +2,7 @@
 
 --ignore-case
 
---type-add=scss=.scss
---type-add=sass=.sass
---type-add=coffeescript=.coffee
---type-add=haml=.haml
+--type-set=scss=.scss
+--type-set=sass=.sass
+--type-set=coffeescript=.coffee
+--type-set=haml=.haml
