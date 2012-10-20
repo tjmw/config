@@ -104,8 +104,25 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
+" =============================================================================
+" Plugin specific
+" =============================================================================
 
+" pathogen
+" ========
 call pathogen#infect()
+
+" nerdcommenter
+" =============
+map <leader>/ <plug>NERDCommenterToggle<CR>
+imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>i
+
+" nerdtree
+" ========
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
+
+" Default mapping, <leader>n
+map <leader> :NERDTreeToggle<CR>
 
 " =============================================================================
 " Functions (and corresponding mappings)
