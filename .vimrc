@@ -49,9 +49,7 @@ set completeopt+=longest  " insert any common text for insert completion
 set wildmode=longest,list " in ex mode, complete longest common string, then list alternatives (like bash)
 set diffopt+=iwhite,vertical " ignore whitespace in diffmode
 
-" set up statusline
-set statusline=%f\ %y%r%m%=col\ %c\ line\ %1*%l%*/%L " show file, read-only, modified, file type, and line number
-set laststatus=2                                     " always show the status line
+set laststatus=2 " always show the status line
 
 " force the foreground color to black on sections which differ
 hi DiffText cterm=bold ctermbg=9 ctermfg=16
