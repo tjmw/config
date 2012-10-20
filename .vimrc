@@ -128,33 +128,6 @@ map <leader> :NERDTreeToggle<CR>
 " Functions (and corresponding mappings)
 " =============================================================================
 
-" toggle a comment at the beginning of the line
-" see http://www.perlmonks.org/?node_id=561215 for more info
-function ToggleComment()
-    let comment_start = '#'
-    let comment_end   = ''
-
-    if &filetype == 'sql'
-        let comment_start = '--'
-    endif
-    if &filetype == 'vim'
-        let comment_start = '"'
-    endif
-    if &filetype == 'css'
-        let comment_start = '\/\* '
-        let comment_end   = ' \*\/'
-    endif
-
-    if getline('.') =~ ('^' . comment_start)
-        execute 's/^' . comment_start . '//'
-        execute 's/' . comment_end . '$//'
-    else
-        s/^/\=comment_start/
-        s/$/\=comment_end/
-    endif
-endfunction
-map <silent> X :call ToggleComment()<cr>j
-
 " remove leading whitespace
 function RemoveLeadingWhiteSpace()
     if getline('.') =~ ('^\s\+')
