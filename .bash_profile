@@ -15,6 +15,9 @@ export PATH=$PATH:/usr/local/mysql/bin # MySQL binaries
 
 export EDITOR=vim
 
+alias be='bundle exec'
+alias migrate='bundle exec rake db:migrate db:test:prepare'
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Print gem location
