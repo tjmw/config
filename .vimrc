@@ -123,7 +123,7 @@ imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
 
 " Default mapping, <leader>n
-map <leader> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " =============================================================================
 " Functions (and corresponding mappings)
