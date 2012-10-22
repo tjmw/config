@@ -8,6 +8,7 @@
 set encoding=utf8
 set mousehide
 set ruler
+set nu
 syntax on                 " turn on syntax highlighting
 filetype indent plugin on " set indentation rules based on file type and enable filetype plugins
 set t_Co=256              " use 256 colors
