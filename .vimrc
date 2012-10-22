@@ -4,6 +4,9 @@
 " vimrc usefulness!
 " =============================================================================
 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 " general
 set encoding=utf8
 set mousehide
@@ -108,10 +111,6 @@ map <c-l> <c-w>l
 " =============================================================================
 " Plugin specific
 " =============================================================================
-
-" pathogen
-" ========
-call pathogen#infect()
 
 " nerdcommenter
 " =============
