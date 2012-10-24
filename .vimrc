@@ -16,7 +16,7 @@ set nowrap
 syntax on                 " turn on syntax highlighting
 filetype indent plugin on " set indentation rules based on file type and enable filetype plugins
 set t_Co=256              " use 256 colors
-set bg=dark
+colorscheme jellybeans
 " editing
 set expandtab
 set tabstop=2
