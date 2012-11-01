@@ -24,3 +24,7 @@ alias migrate='bundle exec rake db:migrate db:test:prepare'
 function gemloc {
   ruby -e "puts Gem::Specification.find_by_name('$1').gem_dir"
 }
+
+function tags {
+  ctags --exclude=.git --exclude=log --exclude=public --exclude='*.js' --exclude='*.coffee' --exclude=tmp -R -f .tags *
+}
