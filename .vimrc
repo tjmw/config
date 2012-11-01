@@ -125,6 +125,15 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', 
 " Default mapping, <leader>n
 map <leader>n :NERDTreeToggle<CR>
 
+" ctrlp
+" =====
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|\~)$',
+  \ }
+
+let g:ctrlp_extensions = ['tag']
+
 " =============================================================================
 " Functions (and corresponding mappings)
 " =============================================================================
