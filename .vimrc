@@ -26,6 +26,7 @@ set copyindent                 " copy indenting style of the line above
 set whichwrap=b,s,h,l,<,>,[,]  " allow the cursor to wrap on anything
 set backspace=2                " fully enable backspace to delete anything in insert mode
 set clipboard=unnamed
+set tags+=.tags
 let loaded_matchparen = 1      " don't show matching parens in vim 7+
 
 let g:Powerline_symbols = 'fancy'
