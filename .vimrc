@@ -135,6 +135,10 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_extensions = ['tag']
 
+" taglist.vim
+" ===========
+map <leader>t :TlistToggle<CR>
+
 " =============================================================================
 " Functions (and corresponding mappings)
 " =============================================================================
