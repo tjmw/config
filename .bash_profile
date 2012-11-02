@@ -17,6 +17,7 @@ export EDITOR=vim
 
 alias be='bundle exec'
 alias migrate='bundle exec rake db:migrate db:test:prepare'
+alias rdb='be rails dbconsole'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
