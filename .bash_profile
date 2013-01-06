@@ -4,8 +4,8 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # Git helpers
-source /Users/tom/dev/scripts/.git-completion.sh
-source /Users/tom/dev/scripts/.git-prompt.sh
+source $HOME/dev/scripts/.git-completion.sh
+source $HOME/dev/scripts/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 export PS1='\[\033[1;35m\]\u@\h \w$(__git_ps1 " (%s)") \[\033[0;33m\]$ \[\033k\033\\\]\[\033[0m\]'
