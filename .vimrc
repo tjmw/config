@@ -139,6 +139,17 @@ let g:ctrlp_extensions = ['tag']
 " ===========
 map <leader>t :TlistToggle<CR>
 
+" vroom.vim
+" =========
+
+" Mappings to run tests with old 'spec' command
+
+command! -nargs=0 VroomRunTestFileWithOldSpec call vroom#RunTestFile({'runner': 'spec'})
+command! -nargs=0 VroomRunNearestTestWithOldSpec call vroom#RunNearestTest({'runner': 'spec'})
+
+silent! map <unique> <Leader>s :VroomRunTestFileWithOldSpec<CR>
+silent! map <unique> <Leader>S :VroomRunNearestTestWithOldSpec<CR>
+
 " =============================================================================
 " Functions (and corresponding mappings)
 " =============================================================================
