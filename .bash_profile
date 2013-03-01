@@ -29,3 +29,7 @@ function gemloc {
 function tags {
   ctags --exclude=.git --exclude=log --exclude=public --exclude='*.js' --exclude='*.coffee' --exclude=tmp -R -f .tags *
 }
+
+function top10 {
+  history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}'|sort -rn |head -n 10
+}
