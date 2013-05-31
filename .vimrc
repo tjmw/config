@@ -162,22 +162,6 @@ function RemoveLeadingWhiteSpace()
 endfunction
 map <silent> W :call RemoveLeadingWhiteSpace()<cr>j
 
-" easy tab indenting
-function Indent()
-    let indent_char = "\t"
-    s/^/\=indent_char/
-endfunction
-map <silent> <tab> :call Indent()<cr>j
-
-" just like above, but remove tabs at start of line
-function UnIndent()
-    let indent_char = "\t"
-    if getline('.') =~ ('^' . indent_char)
-        execute 's/^' . indent_char . '//'
-    endif
-endfunction
-map <silent> <s-tab> :call UnIndent()<cr>j
-
 " Highlight lines > 100 characters
 function HighlightLongLines()
     match LongLines '\%>100v.\+'
