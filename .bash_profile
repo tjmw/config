@@ -18,6 +18,10 @@ export EDITOR=vim
 alias be='bundle exec'
 alias migrate='bundle exec rake db:migrate db:test:prepare'
 alias rdb='be rails dbconsole'
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
+alias tn='tmux new -s'
+alias vi='vim'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
