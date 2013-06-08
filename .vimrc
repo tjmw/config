@@ -65,7 +65,8 @@ hi DiffText cterm=bold ctermbg=9 ctermfg=16
 " autocmd BufNewFile,BufRead * call HighlightLongLines()
 
 " highlight trailing whitespace
-match ErrorMsg '\s\+$'
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 imap § <Esc>
 
