@@ -140,6 +140,10 @@ let g:ctrlp_extensions = ['tag']
 " ===========
 map <leader>t :TlistToggle<CR>
 
+" golden-ratio
+" ============
+let g:loaded_golden_ratio = 1
+
 " vroom.vim
 " =========
 
