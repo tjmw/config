@@ -102,8 +102,14 @@ au VimLeave * silent call ResetTitle()
 " from http://vim.wikia.com/wiki/Open_file_under_cursor
 map ,f :vertical wincmd f<CR>
 
-" use ,d to diff against repository using VCSVimDiff
-map ,d :VCSVimDiff<CR>
+map <leader>b :VCSBlame<CR>
+map <leader>d :VCSVimDiff<CR>
+map <leader>el :RExtractLet<CR>
+map <leader>em :RExtractMethod<CR>
+map <leader>nf :NERDTreeFind<CR>
+map <Leader>rs :RVunittest<CR>
+map <Leader>sc :vs db/schema.rb<CR>
+map <Leader>av :AV<CR>
 
 " map ctrl-hjkl for easy window movement
 map <c-h> <c-w>h
@@ -155,6 +161,11 @@ command! -nargs=0 VroomRunNearestTestWithOldSpec call vroom#RunNearestTest({'run
 silent! map <unique> <Leader>s :VroomRunTestFileWithOldSpec<CR>
 silent! map <unique> <Leader>S :VroomRunNearestTestWithOldSpec<CR>
 
+command! -nargs=0 VroomRunTestFileWithCucumber call vroom#RunTestFile({'runner': 'bundle exec cucumber'})
+command! -nargs=0 VroomRunNearestTestWithCucumber call vroom#RunNearestTest({'runner': 'bundle exec cucumber'})
+
+silent! map <unique> <Leader>c :VroomRunTestFileWithCucumber<CR>
+silent! map <unique> <Leader>C :VroomRunNearestTestWithCucumber<CR>
 " =============================================================================
 " Functions (and corresponding mappings)
 " =============================================================================
