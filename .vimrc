@@ -110,6 +110,7 @@ map <leader>nf :NERDTreeFind<CR>
 map <Leader>rs :RVunittest<CR>
 map <Leader>sc :vs db/schema.rb<CR>
 map <Leader>av :AV<CR>
+map <Leader>vsa :vert sba<CR>
 
 " map ctrl-hjkl for easy window movement
 map <c-h> <c-w>h
