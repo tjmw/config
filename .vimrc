@@ -166,6 +166,13 @@ command! -nargs=0 VroomRunNearestTestWithCucumber call vroom#RunNearestTest({'ru
 
 silent! map <unique> <Leader>c :VroomRunTestFileWithCucumber<CR>
 silent! map <unique> <Leader>C :VroomRunNearestTestWithCucumber<CR>
+
+" syntastic
+" =========
+
+" Don't complain about angular attributes
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
 " =============================================================================
 " Functions (and corresponding mappings)
 " =============================================================================
