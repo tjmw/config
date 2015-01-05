@@ -1,7 +1,5 @@
 --color
 
---ignore-case
-
 --type-set=scss=.scss
 --type-set=sass=.sass
 --type-set=coffeescript=.coffee
