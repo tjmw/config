@@ -8,3 +8,5 @@
 --type-set=mustache=.mustache
 --type-set=jsx=.jsx
 --type-set=json=.json
+
+--ignore-dir=.bundle
