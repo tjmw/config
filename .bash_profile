@@ -25,6 +25,7 @@ alias rdb='be rails dbconsole'
 alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
 alias tn='tmux new -s'
+alias tnc='tmux new -s `basename $(pwd)`'
 alias trc='tmux source-file ~/.tmux.conf'
 alias vi='vim'
 
