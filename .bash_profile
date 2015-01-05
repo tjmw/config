@@ -15,6 +15,8 @@ export PATH=$PATH:/usr/local/mysql/bin # MySQL binaries
 
 export EDITOR=vim
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 alias be='bundle exec'
 alias migrate='bundle exec rake db:migrate db:test:prepare'
 alias rdb='be rails dbconsole'
