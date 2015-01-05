@@ -6,3 +6,5 @@
 --type-set=haml=.haml
 --type-set=cucumber=.feature
 --type-set=mustache=.mustache
+--type-set=jsx=.jsx
+--type-set=json=.json
