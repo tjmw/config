@@ -18,8 +18,8 @@ export EDITOR=vim
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias be='bundle exec'
-alias gd='git diff'
-alias gs='git status'
+alias gst='git status'
+alias gco='git checkout'
 alias migrate='bundle exec rake db:migrate db:test:prepare'
 alias rdb='be rails dbconsole'
 alias ta='tmux attach -t'
