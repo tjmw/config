@@ -147,22 +147,12 @@ let g:ctrlp_extensions = ['tag']
 " ============
 let g:loaded_golden_ratio = 1
 
-" vroom.vim
-" =========
-
-" Mappings to run tests with old 'spec' command
-
-command! -nargs=0 VroomRunTestFileWithOldSpec call vroom#RunTestFile({'runner': 'spec'})
-command! -nargs=0 VroomRunNearestTestWithOldSpec call vroom#RunNearestTest({'runner': 'spec'})
-
-silent! map <unique> <Leader>s :VroomRunTestFileWithOldSpec<CR>
-silent! map <unique> <Leader>S :VroomRunNearestTestWithOldSpec<CR>
-
-command! -nargs=0 VroomRunTestFileWithCucumber call vroom#RunTestFile({'runner': 'bundle exec cucumber'})
-command! -nargs=0 VroomRunNearestTestWithCucumber call vroom#RunNearestTest({'runner': 'bundle exec cucumber'})
-
-silent! map <unique> <Leader>c :VroomRunTestFileWithCucumber<CR>
-silent! map <unique> <Leader>C :VroomRunNearestTestWithCucumber<CR>
+" Testing
+" =======
+nmap <silent> <leader>n :TestNearest<CR>
+nmap <silent> <leader>f :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
 
 " syntastic
 " =========
@@ -186,3 +176,5 @@ map <silent> W :call RemoveLeadingWhiteSpace()<cr>j
 function HighlightLongLines()
     match LongLines '\%>100v.\+'
 endfunction
+
+source $HOME/.vim/tmux.vim
