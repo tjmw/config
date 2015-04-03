@@ -18,3 +18,9 @@ $ git submodule update --init
 ```
 
 after cloning.
+
+### Update Submodules
+
+```
+$ git submodule foreach git pull origin master
+```
