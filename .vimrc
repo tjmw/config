@@ -160,6 +160,13 @@ nmap <silent> <leader>l :TestLast<CR>
 " Don't complain about angular attributes
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+" automatically check
+let g:syntastic_check_on_open=1
+
+" enable specific syntastic checkers
+let g:syntastic_ruby_checkers=['mri', 'rubocop']
+let g:syntastic_ruby_rubocop_exec="$HOME/.rbenv/shims/rubocop"
+
 " =============================================================================
 " Functions (and corresponding mappings)
 " =============================================================================
@@ -178,3 +185,7 @@ function HighlightLongLines()
 endfunction
 
 source $HOME/.vim/tmux.vim
+
+" Rubocop
+" =======
+let g:vimrubocop_config = "$HOME/.rubocop.yml"
