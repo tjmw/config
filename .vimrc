@@ -160,6 +160,13 @@ nmap <silent> <leader>l :TestLast<CR>
 " Don't complain about angular attributes
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+" show syntastic errors in the margin
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_style_rror_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_warning_symbol='⚠'
+
 " automatically check
 let g:syntastic_check_on_open=1
 
