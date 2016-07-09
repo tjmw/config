@@ -8,5 +8,6 @@
 --type-set=mustache=.mustache
 --type-set=jsx=.jsx
 --type-set=json=.json
+--type-add=ruby=.builder
 
 --ignore-dir=.bundle
