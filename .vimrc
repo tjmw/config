@@ -37,7 +37,6 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'raichoo/haskell-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'skalnik/vim-vroom'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-endwise'
@@ -50,6 +49,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/tlib'
 Plugin 'vim-scripts/vcscommand.vim'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,6 +66,13 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set nocompatible
+filetype off
+
+let &runtimepath.=',~/.vim/bundle/ale'
+
+filetype plugin on
 
 " general
 set encoding=utf8
@@ -209,26 +216,6 @@ nmap <silent> <leader>n :TestNearest<CR>
 nmap <silent> <leader>f :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
-
-" syntastic
-" =========
-
-" Don't complain about angular attributes
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-
-" show syntastic errors in the margin
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_style_rror_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_warning_symbol='⚠'
-
-" automatically check
-let g:syntastic_check_on_open=1
-
-" enable specific syntastic checkers
-let g:syntastic_ruby_checkers=['mri', 'rubocop']
-let g:syntastic_ruby_rubocop_exec="$HOME/.rbenv/shims/rubocop"
 
 " =============================================================================
 " Functions (and corresponding mappings)
