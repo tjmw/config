@@ -46,6 +46,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/tlib'
 Plugin 'vim-scripts/vcscommand.vim'
@@ -88,7 +89,7 @@ set clipboard=unnamed
 set tags+=.tags
 let loaded_matchparen = 1      " don't show matching parens in vim 7+
 
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 " filetypes
 autocmd BufNewFile,BufRead *.t              set filetype=perl
