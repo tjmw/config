@@ -15,6 +15,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'ElmCast/elm-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'ajf/puppet-vim'
 Plugin 'benmills/vimux'
@@ -30,7 +31,6 @@ Plugin 'jnwhiteh/vim-golang'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-Plugin 'lambdatoast/elm.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'ngmy/vim-rubocop'
@@ -66,13 +66,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-set nocompatible
-filetype off
-
-let &runtimepath.=',~/.vim/bundle/ale'
-
-filetype plugin on
 
 " general
 set encoding=utf8
@@ -188,6 +181,22 @@ map <c-l> <c-w>l
 " =============================================================================
 " Plugin specific
 " =============================================================================
+
+" ALE
+" ===
+
+set nocompatible
+filetype off
+
+let &runtimepath.=',~/.vim/bundle/ale'
+
+filetype plugin on
+
+" elm-vim
+" =======
+
+let g:elm_format_autosave = 1
+let g:elm_setup_keybindings = 0
 
 " nerdcommenter
 " =============
