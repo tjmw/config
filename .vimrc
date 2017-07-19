@@ -213,7 +213,7 @@ map <leader>n :NERDTreeToggle<CR>
 " ctrlp
 " =====
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|elm-stuff|node_modules)$',
   \ 'file': '\v\.(exe|so|dll|\~)$',
   \ }
 
