@@ -32,7 +32,6 @@ Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'raichoo/haskell-vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -46,6 +45,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/tlib'
 Plugin 'vim-scripts/vcscommand.vim'
@@ -76,7 +76,7 @@ set nowrap
 syntax on                 " turn on syntax highlighting
 filetype indent plugin on " set indentation rules based on file type and enable filetype plugins
 set t_Co=256              " use 256 colors
-colorscheme jellybeans
+colorscheme solarized
 " editing
 set expandtab
 set tabstop=2
