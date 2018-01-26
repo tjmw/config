@@ -31,9 +31,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'janko-m/vim-test'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'jnwhiteh/vim-golang'
+Plugin 'junegunn/fzf.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'raichoo/haskell-vim'
@@ -211,6 +211,11 @@ let g:ale_fix_on_save = 1
 let g:elm_format_autosave = 1
 let g:elm_setup_keybindings = 0
 
+" fzf
+" ===
+set rtp+=/usr/local/opt/fzf
+noremap <C-p> :Files<CR>
+
 " nerdcommenter
 " =============
 map <leader>/ <plug>NERDCommenterToggle<CR>
@@ -222,15 +227,6 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', 
 
 " Default mapping, <leader>n
 map <leader>n :NERDTreeToggle<CR>
-
-" ctrlp
-" =====
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|elm-stuff|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll|\~)$',
-  \ }
-
-let g:ctrlp_extensions = ['tag']
 
 " indentLin
 " =========
