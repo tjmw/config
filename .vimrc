@@ -17,7 +17,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ElmCast/elm-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Yggdroot/indentLine'
 Plugin 'ajf/puppet-vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'benmills/vimux'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -46,12 +48,10 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/tlib'
 Plugin 'vim-scripts/vcscommand.vim'
 Plugin 'w0rp/ale'
-Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
