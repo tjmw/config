@@ -20,6 +20,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'ajf/puppet-vim'
 Plugin 'benmills/vimux'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
@@ -172,12 +173,6 @@ map <Leader>rs :RVunittest<CR>
 map <Leader>sc :vs db/schema.rb<CR>
 map <Leader>av :AV<CR>
 map <Leader>vsa :vert sba<CR>
-
-" map ctrl-hjkl for easy window movement
-map <c-h> <c-w>h
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
 
 " =============================================================================
 " Plugin specific
