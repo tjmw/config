@@ -178,6 +178,11 @@ map <Leader>vsa :vert sba<CR>
 " Plugin specific
 " =============================================================================
 
+" ack.vim
+" =======
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+
 " ALE
 " ===
 
