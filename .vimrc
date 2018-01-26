@@ -50,6 +50,7 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/tlib'
 Plugin 'vim-scripts/vcscommand.vim'
 Plugin 'w0rp/ale'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -230,6 +231,10 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ctrlp_extensions = ['tag']
+
+" indentLin
+" =========
+let g:indentLine_char = '│'
 
 " Testing
 " =======
