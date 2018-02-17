@@ -256,8 +256,6 @@ function HighlightLongLines()
     match LongLines '\%>100v.\+'
 endfunction
 
-source $HOME/.vim/tmux.vim
-
 " Rubocop
 " =======
 let g:vimrubocop_config = "$HOME/.rubocop.yml"
