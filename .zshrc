@@ -62,6 +62,10 @@ export EDITOR=vim
 export LESS=-RFX
 export PATH="$HOME/.bin:$PATH"
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 eval "$(rbenv init - --no-rehash)"
 eval "$(hub alias -s)"
 
