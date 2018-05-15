@@ -116,3 +116,4 @@ bindkey "[C" forward-word
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
