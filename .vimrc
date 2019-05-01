@@ -20,12 +20,14 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ajf/puppet-vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'alx741/vim-hindent'
 Plugin 'benmills/vimux'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'janko-m/vim-test'
@@ -34,9 +36,10 @@ Plugin 'jnwhiteh/vim-golang'
 Plugin 'junegunn/fzf.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'neovimhaskell/haskell-vim'
 Plugin 'ngmy/vim-rubocop'
-Plugin 'raichoo/haskell-vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'skalnik/vim-vroom'
@@ -75,10 +78,11 @@ set mousehide
 set ruler
 set nu
 set nowrap
-syntax on                 " turn on syntax highlighting
+syntax enable             " turn on syntax highlighting
 filetype indent plugin on " set indentation rules based on file type and enable filetype plugins
 set t_Co=256              " use 256 colors
 colorscheme solarized
+set background=dark
 " editing
 set expandtab
 set tabstop=2
@@ -194,16 +198,21 @@ let &runtimepath.=',~/.vim/bundle/ale'
 filetype plugin on
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
-" disable the Ale HTML linters
 let g:ale_linters = {
 \   'html': [],
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
 \}
-
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = [
-\ 'prettier', 'eslint'
-\]
+"\   'haskell': ['hlint', 'hdevtools', 'hfmt'],
 let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\    'javascript': ['prettier'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
 
 " elm-vim
 " =======
