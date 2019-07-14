@@ -69,7 +69,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-eval "$(rbenv init - --no-rehash)"
+#eval "$(rbenv init - --no-rehash)"
 eval "$(hub alias -s)"
 
 alias be='bundle exec'
@@ -124,3 +124,7 @@ export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
