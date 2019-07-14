@@ -1,2 +1,5 @@
 bundle
 vim/view/
+*.swp
+*.swo
+.DS_Store
