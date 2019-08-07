@@ -28,6 +28,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
+Plugin 'fgsch/vim-varnish'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'janko-m/vim-test'
@@ -38,9 +39,11 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'kristijanhusak/vim-carbon-now-sh'
 Plugin 'mileszs/ack.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'skalnik/vim-vroom'
@@ -104,6 +107,8 @@ autocmd BufNewFile,BufRead *.yaml,*.yml     set filetype=yaml
 
 " in text files, always limit the width of text to 78 characters
 autocmd BufNewFile,BufRead *.txt            set tw=78
+
+autocmd FileType php,ruby,eruby,yaml,javascript,sass set colorcolumn=80,100
 
 " set filename in the screen status line when using screen
 " see http://www.vim.org/tips/tip.php?tip_id=1126
@@ -178,6 +183,8 @@ map <Leader>rs :RVunittest<CR>
 map <Leader>sc :vs db/schema.rb<CR>
 map <Leader>av :AV<CR>
 map <Leader>vsa :vert sba<CR>
+map <Leader>g :Ag<CR>
+map <Leader>y :ALENext<CR>
 
 " =============================================================================
 " Plugin specific
@@ -214,6 +221,8 @@ let g:ale_fixers = {
 \    'scss': ['prettier'],
 \    'html': ['prettier']
 \}
+
+call ale#Set('javascript_flow_executable', 'yarn flow')
 
 " elm-vim
 " =======
@@ -265,7 +274,3 @@ map <silent> W :call RemoveLeadingWhiteSpace()<cr>j
 function HighlightLongLines()
     match LongLines '\%>100v.\+'
 endfunction
-
-" Rubocop
-" =======
-let g:vimrubocop_config = "$HOME/.rubocop.yml"
