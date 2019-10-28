@@ -17,6 +17,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ElmCast/elm-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Shougo/deoplete.nvim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ajf/puppet-vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -24,6 +25,7 @@ Plugin 'alx741/vim-hindent'
 Plugin 'benmills/vimux'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
@@ -44,6 +46,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'posva/vim-vue'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'skalnik/vim-vroom'
@@ -219,10 +223,16 @@ let g:ale_fixers = {
 \    'typescript': ['prettier'],
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
-\    'html': ['prettier']
+\    'html': ['prettier'],
+\    'scala': ['scalafmt']
 \}
 
 call ale#Set('javascript_flow_executable', 'yarn flow')
+
+" deoplete
+" ========
+
+"let g:deoplete#enable_at_startup = 1
 
 " elm-vim
 " =======
