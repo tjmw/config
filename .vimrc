@@ -199,6 +199,9 @@ map <Leader>y :ALENext<CR>
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev ag Ack
 
+" bind K to grep word under cursor
+nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " ALE
 " ===
 
