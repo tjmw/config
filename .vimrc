@@ -218,7 +218,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {
 \   'html': [],
 \   'javascript': ['eslint', 'flow'],
-\   'typescript': ['tsserver', 'tslint'],
+\   'typescript': ['tsserver'],
 \   'vue': ['eslint']
 \}
 "\   'haskell': ['hlint', 'hdevtools', 'hfmt'],
