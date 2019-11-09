@@ -119,6 +119,9 @@ autocmd FileType php,ruby,eruby,yaml,javascript,sass set colorcolumn=80,100
 " see http://www.vim.org/tips/tip.php?tip_id=1126
 autocmd BufEnter * let &titlestring = expand("%:t")
 
+" Skeletons
+au BufNewFile *.html 0r ~/vim/html.skel | let IndentStyle = "html"
+
 " searching
 set ignorecase
 set wrapscan " searched wrap around the end of the file
