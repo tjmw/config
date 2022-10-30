@@ -42,6 +42,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'kristijanhusak/vim-carbon-now-sh'
 Plugin 'mileszs/ack.vim'
+"Plugin 'tjmw/coc.nvim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'posva/vim-vue'
@@ -291,3 +292,5 @@ map <silent> W :call RemoveLeadingWhiteSpace()<cr>j
 function HighlightLongLines()
     match LongLines '\%>100v.\+'
 endfunction
+
+"source ~/vim/coc.vim
