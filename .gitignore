@@ -3,3 +3,10 @@ vim/view/
 *.swp
 *.swo
 .DS_Store
+.metals
+venv
+.bloop
+project/.bloop
+project/metals.sbt
+project/project
+.vscode
