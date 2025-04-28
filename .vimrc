@@ -19,30 +19,31 @@ Plugin 'ElmCast/elm-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'ajf/puppet-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'alx741/vim-hindent'
 Plugin 'benmills/vimux'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-scala'
-"Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'fgsch/vim-varnish'
-"Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'ianks/vim-tsx'
 Plugin 'janko-m/vim-test'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'jparise/vim-graphql'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'kristijanhusak/vim-carbon-now-sh'
 Plugin 'mileszs/ack.vim'
-"Plugin 'tjmw/coc.nvim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'posva/vim-vue'
@@ -52,7 +53,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'skalnik/vim-vroom'
 Plugin 'slim-template/vim-slim'
-Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
@@ -61,7 +61,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/taglist.vim'
-Plugin 'vim-scripts/tlib'
+"Plugin 'vim-scripts/tlib'
 Plugin 'vim-scripts/vcscommand.vim'
 Plugin 'w0rp/ale'
 
@@ -92,6 +92,7 @@ filetype indent plugin on " set indentation rules based on file type and enable 
 set t_Co=256              " use 256 colors
 colorscheme solarized
 set background=dark
+set relativenumber
 " editing
 set expandtab
 set tabstop=2
@@ -118,9 +119,6 @@ autocmd FileType php,ruby,eruby,yaml,javascript,sass set colorcolumn=80,100
 " set filename in the screen status line when using screen
 " see http://www.vim.org/tips/tip.php?tip_id=1126
 autocmd BufEnter * let &titlestring = expand("%:t")
-
-" Skeletons
-au BufNewFile *.html 0r ~/vim/html.skel | let IndentStyle = "html"
 
 " searching
 set ignorecase
@@ -227,8 +225,8 @@ let g:ale_linters = {
 "\   'haskell': ['hlint', 'hdevtools', 'hfmt'],
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\    'javascript': ['prettier'],
-\    'typescript': ['prettier'],
+\    'javascript': ['eslint'],
+\    'typescript': ['eslint'],
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
@@ -292,5 +290,3 @@ map <silent> W :call RemoveLeadingWhiteSpace()<cr>j
 function HighlightLongLines()
     match LongLines '\%>100v.\+'
 endfunction
-
-"source ~/vim/coc.vim
