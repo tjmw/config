@@ -86,6 +86,7 @@ alias tn='tmux new -s'
 alias tnc='tmux new -s `basename $(pwd)`'
 alias trc='tmux source-file ~/.tmux.conf'
 alias vi='vim'
+alias pf='pnpm --filter'
 
 # Use Alt-Left and Alt-Right to move back and forward by word. Also requires
 # mappings in iTerm (to send the right escape sequence - Esc-b and Esc-f)
