@@ -1,7 +1,3 @@
-# Commented this 17/8/2021 as it was breaking pyenv
-# Added from https://github.com/creationix/nvm/issues/1652:
-# PATH="/usr/local/bin:$(getconf PATH)"
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -66,13 +62,6 @@ export EDITOR=vim
 export LESS=-RFX
 export PATH="$HOME/.bin:$PATH"
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-#eval "$(rbenv init - --no-rehash)"
-#eval "$(hub alias -s)"
-
 alias be='bundle exec'
 alias fixcamera='sudo killall VDCAssistant'
 alias gg='git grep'
@@ -119,33 +108,11 @@ bindkey "[C" forward-word
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# https://github.com/zsh-users/zsh-syntax-highlighting
-#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
-
-#. $HOME/.asdf/asdf.sh
-
-#. $HOME/.asdf/completions/asdf.bash
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-#export JAVA_HOME=$(/usr/libexec/java_home)
-
-eval "$(pyenv init --path)"
-eval "$(fnm env --use-on-cd)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#export SDKMAN_DIR="/Users/tom_wey/.sdkman"
-#[[ -s "/Users/tom_wey/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tom_wey/.sdkman/bin/sdkman-init.sh"
-
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/Tom_Wey/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Tom_Wey/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/Tom_Wey/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Tom_Wey/google-cloud-sdk/completion.zsh.inc'; fi
 
 # export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 
 source <(fzf --zsh)
+
+eval "$(mise activate zsh)"
