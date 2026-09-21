@@ -22,3 +22,8 @@ add_to_bashrc() {
 add_to_bashrc 'source /usr/share/bash-completion/completions/git'
 # Make it work with the g alias
 add_to_bashrc '__git_complete g __git_main'
+
+# Add the dependencyTree plugin
+mkdir -p "$HOME/.sbt/1.0/plugins"
+file="$HOME/.sbt/1.0/plugins/plugins.sbt"
+grep -qxF 'addDependencyTreePlugin' "$file" 2>/dev/null || echo 'addDependencyTreePlugin' >> "$file"
